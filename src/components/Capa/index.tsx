@@ -1,25 +1,30 @@
-import { Paper } from '@mui/material';
-
-import capaImg from '../../../public/capa.svg';
+import { Box, Card, Typography } from '@mui/material';
+import { C } from './style';
 import Image from 'next/image';
+import logoLiah from '../../../public/logo.svg';
 
 export default function Capa() {
   return (
-    <Paper
-      sx={{
-        maxWidth: '650px',
-        maxHeight: '650px',
-        width: '100%',
-        height: '100%',
-        borderRadius: '5px',
-      }}
-    >
-      <Image
-        src={capaImg}
-        alt="Seja nosso parceiro"
-        width={650}
-        height={650}
-      />
-    </Paper>
+    <C.Wrapper>
+      <C.Header>
+        <Image width={140} height={55} src={logoLiah} alt="Logo liah" />
+
+        <Typography className="seja-nosso-parceiro">Seja Nosso Parceiro</Typography>
+      </C.Header>
+
+      <C.BoxContainer>
+        <Card>
+          test
+        </Card>
+
+        <Card>
+          test
+        </Card>
+
+        <Card>
+          test
+        </Card>
+      </C.BoxContainer>
+    </C.Wrapper>
   );
 }
